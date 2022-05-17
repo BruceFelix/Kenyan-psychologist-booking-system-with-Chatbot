@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+header  {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(45deg, rgba(48, 34, 56, 0.6), rgba(48, 34, 56, 0.6)),url("/Kenyan-psychologist-booking-system-with-Chatbot/Images/Langingpagebackground.jpg");
+    background-size: cover;
+}
+nav{
+    color: white;
+    width:600px;
+    height: 400px;
+
+}   
+nav ul{
+    list-style: none;
+}
+.description{
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    right: 300px;
+}
