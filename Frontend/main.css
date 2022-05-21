@@ -10,21 +10,112 @@ a{
 header  {
     width: 100%;
     height: 600px;
-    background: linear-gradient(45deg, rgba(48, 34, 56, 0.6), rgba(48, 34, 56, 0.6)),url("/Kenyan-psychologist-booking-system-with-Chatbot/Images/Langingpagebackground.jpg");
-    background-size: cover;
+    /* background-color: #a4508b; */
+    /* background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); */
+
+    background: linear-gradient(0deg, rgba(49, 35, 57, 0.9), rgba(48, 34, 56, 0.7)),url("/Images/Langingpagebackground.jpg");
+    background-size: cover; 
 }
 nav{
     color: white;
-    width:600px;
+    width:100%;
     height: 400px;
-
-}   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    height: 76px;
+    margin: 0 170px;
+}  
 nav ul{
     list-style: none;
+    display: flex;
+    margin-top: 30px;
+    padding: 5px;
 }
-.description{
-    justify-content: center;
-    position: absolute;
-    top: 100px;
-    right: 300px;
+li{
+    height: 25px;
+    margin: 0 10px;
+}
+li:hover{
+    border-bottom: 1px solid rgb(226, 98, 226);
+}
+li a{ 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2px;
+}
+.link{
+    border: 1px solid white;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+.link:hover{
+    background-color: rgba(194, 89, 255, 0.9);
+    color: white;
+    border: none;
+}
+
+.name{
+    display: flex;
+    font-family: 'MuseoModerno', cursive;
+    width: 300px;
+    padding: 0 20px;
+}
+.name p{
+    display: inline-block;
+    margin: 3px;
+    height: 50px;
+}
+.name p:nth-child(1){
+    font-size:40px;
+}
+.name p:nth-child(2){
+    font-size: 12px;
+    margin-top: 20px;
+}
+.description {
+    margin-top: 120px;
+    text-align: center;
+}
+.description h1{
+    font-size: 3.85rem;
+}
+.description p {
+    margin: 10px;
+    font-size: 20px;
+}
+.description p:nth-child(4){
+    color: rgba(255, 255, 255, 0.631);
+}
+.description button{
+    box-shadow: 0px 3px 5px -1px
+     rgba(0,0,0,.2),0px 6px 10px 0px 
+     rgba(0,0,0,.14),0px 1px 18px 0px 
+     rgba(0,0,0,.12);
+    font-size: 1.375rem;
+    font-weight: 300;
+    margin-top: 15px;
+    padding: 14px 20px 12px;
+    background-color: #722a88;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+.description button:hover{
+    background-color: rgb(149, 101, 195);
+}
+.search{
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    align-self: baseline;
+}
+.bookings{
+    background-color: #f5f6fag;
 }
