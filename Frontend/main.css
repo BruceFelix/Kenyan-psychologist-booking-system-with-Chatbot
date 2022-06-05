@@ -246,3 +246,96 @@ button span{
     height: 25px;
     width: 25px;
 }
+.slider{
+    display: none;
+}
+.content_about{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    object-fit: contain;
+    width: 60%;
+    height: 400px;
+
+}
+.content_about img{
+    background-color:white;
+    border-radius: 50%;
+}
+.about{
+    width: 100%;
+    background-color: #460a58;
+}
+.adjectives{
+    display: flex;
+    justify-content: space-evenly;
+    background-color:#f5f6fa;
+    height: 400px;
+    margin: 40px;
+}
+.countrys_description{
+    color: #533747;
+    font-size: 1.125rem;
+    flex-basis: 500px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    margin: 50px;
+}
+.more_description{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    color: rgb(86, 82, 82);
+}
+.more_description h4{
+    color: #6E6362;
+    margin:20px 0;
+}
+.adjective p{
+    border-bottom: 1px solid rgb(129, 126, 126);
+    max-width:max-content;
+    padding-bottom: 15px;
+
+}
+.letsgo{
+    width: 8%;
+    height: 150px;
+    margin: 20px auto;
+}
+.letsgo img{
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+}
+footer{
+    background-color: #48334e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white ;
+}
+footer li{
+    list-style: none;
+    display: inline-block;
+}
+footer ul{
+    padding: 10px;
+}
+footer p{
+    padding: 10px;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    color: white;
+}
