@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f5f6fa;
+}
+body img{
+    z-index: -1000;
+    position: absolute;
+}
+body img:nth-child(2){
+    position: absolute;
+    margin-top: 1000px;
+    right: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+header  {
+    width: 100%;
+    height: 600px;
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    background: linear-gradient(0deg, rgba(49, 35, 57, 0.6), rgba(48, 34, 56, 0.5)),url("/Images/about\ background.jpg");
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+nav{
+    color: white;
+    width:100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    height: 76px;
+    margin: 0 170px;
+}  
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+    padding: 5px;
+}
+li{
+    height: 25px;
+    margin: 0 10px;
+}
+li:hover{
+    border-bottom: 1px solid rgb(226, 98, 226);
+}
+li a{ 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2px;
+}
+.link{
+    border: 1px solid white;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+.link:hover{
+    background-color: rgba(194, 89, 255, 0.9);
+    color: white;
+    border: none;
+}
+.name{
+    display: flex;
+    font-family: 'MuseoModerno', cursive;
+    width: 300px;
+    padding: 0 20px;
+}
+.name p{
+    display: inline-block;
+    margin: 3px;
+    height: 50px;
+}
+.name p:nth-child(1){
+    font-size:40px;
+}
+.name p:nth-child(2){
+    font-size: 12px;
+    margin-top: 20px;
+}
+.about{
+    color: rgba(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 300px;
+}
+.about h1, p{
+    margin: 10px 0;
+}
+.about  p{
+    font-size: 20px;
+    line-height: 30px;
+}
+.therapists{
+    height: 400px;
+    width: 60%;
+    margin: 100px 300px 0 300px;
+    text-align: center;
+}
+.therapists h2{
+    font-size: 2.25rem;
+    color: #6e6362;
+}
+.therapists p{
+    font-size: 1.275rem;
+    color: #6e6362;
+    margin: 20px;
+}
+.goals_values{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.goals_values h2{
+    text-align: center;
+    font-size: 2.25rem;
+    color: #6e6362;
+}
+.goalsandvalues{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+    margin: 0 130px;
+}
+.goal_value img{
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin: 10px;
+}
+.goal_value{
+    background-color: white;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px 0 rgb(83 55 71 / 10%);
+    min-height: 100%;
+    height: 371px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
