@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #f5f6fa;
+}
+header{
+    min-height: 100%;
+    width: 100%;
+    background-color: #49075d;
+    padding: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+.name h1{
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+.name{
+    display: flex;
+}
+.name h2{
+    font-size: .9rem;
+    margin-top: 13px;
+    margin-left: 5px;
+    color: white;
+}
+.platform{
+    color: #ffffff;
+}
+ul{
+    list-style: none;
+    margin: 30px 30px 0 30px;
+}
+li{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.links li:hover{
+    border-bottom: 1px solid rgb(13, 1, 13);
+}
+li a{ 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2px;
+    color: white;
+}
+.link{
+    border: 1px solid rgb(255, 255, 255);
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+.link:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.link a:hover{
+    color: rgb(78, 4, 62);
+}
+main{
+    width: 95%;
+    margin: 20px auto;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 4px 5px rgb(45, 9, 40);
+    margin: 10px;
+}
+.card:hover{
+    box-shadow:  1px 5px 5px #d0c6cc;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.intro h3{
+    color:#533747;
+    margin: 3px;
+}
+.intro p{
+    color: #6e6362;
+}
+.intro img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #533747;
+}
+.details p{
+    color: rgb(96, 9, 96);
+    text-align: justify;
+    padding: 5px;
+}
+.contacts button{
+    background-color: #57106d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contacts button:hover{
+    background-color: #2b0a36;
+}
+
+.contacts a{
+    color: white;
+}
+.letsgo{
+    width: 8%;
+    height: 150px;
+    margin: 20px auto;
+}
+.letsgo img{
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+}
+footer{
+    background-color: #48334e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white ;
+}
+footer li{
+    list-style: none;
+    display: inline-block;
+}
+footer ul{
+    padding: 10px;
+}
+footer p{
+    padding: 10px;
+    color: white;
+}
+footer a{
+    color: white;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    color: white;
+}
