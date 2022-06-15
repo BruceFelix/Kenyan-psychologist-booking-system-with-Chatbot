@@ -76,8 +76,62 @@ nav{
 }  
 main{
     width: 80%;
-    margin: 30px auto;
+    margin: 10px auto;
 }
 .form{
-    background-color: #49075db7;
+    /* background-color: #4b105d; */
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+.input-group{
+    margin: 10px;
+}
+.input-group input, textarea{
+    width: 100%;
+    background: #efefef;
+    width: 100%;
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0.125rem solid white;
+    outline: none;
+}
+.password{
+    display: flex;
+    justify-content: space-between;
+}
+.password input{
+    width: 45%;
+}
+button{
+    width: 100%;
+    background-color:#4b105d ;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+.input-group input:focus, textarea:focus{
+    border: 2px solid #4b105d;
+}
+textarea{
+    color: rgb(124, 121, 121);
+    font-family: inherit;
+}
+.therapists p{
+    text-align: center;
+    margin: 5px;
+    color: white;
+}
+.therapists a{
+    color: white;
+}
+.therapists a:hover{
+    color: #535d10;
 }

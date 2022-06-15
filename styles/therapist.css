@@ -13,7 +13,7 @@ body{
 header{
     min-height: 100%;
     width: 100%;
-    background-color: #49075d;
+    background-color: #722a88;
     padding: 10px;
 }
 nav{
@@ -110,7 +110,7 @@ main{
     border: 1px solid #533747;
 }
 .details p{
-    color: rgb(96, 9, 96);
+    color: rgb(0, 0, 0);
     text-align: justify;
     padding: 5px;
 }
