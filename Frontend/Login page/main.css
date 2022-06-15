@@ -273,6 +273,10 @@ body {
     transform: translate(100%, 0);
     right: 50%;
 }
+.therapists a {
+    text-decoration: none;
+    color: black;
+}
 
 /* RESPONSIVE */
 
