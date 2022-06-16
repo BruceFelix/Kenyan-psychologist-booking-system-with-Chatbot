@@ -15,22 +15,26 @@
 			<!-- SIGN UP -->
 			<div class="col align-items-center flex-col sign-up">
 				<div class="form-wrapper align-items-center">
-					<div class="form sign-up">
+					<form action="/backend/loginsigup.php" class="form sign-up" method="post">
 						<div class="input-group">
 							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username">
+							<label for="name"></label>
+							<input id="name" type="text" placeholder="Username">
 						</div>
 						<div class="input-group">
 							<i class='bx bx-mail-send'></i>
-							<input type="email" placeholder="Email">
+							<label for="mail"></label>
+							<input id="mail" type="email" placeholder="Email">
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
+							<label for="password"></label>
 							<input type="password" placeholder="Password">
 						</div>
 						<div class="input-group">
 							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Confirm password">
+							<label for="passconfirm"></label>
+							<input type="password" id="passconfirm" placeholder="Confirm password">
 						</div>
 						<button>
 							Sign up
@@ -48,7 +52,7 @@
 								Sign in here
 							</b>
 						</p>
-					</div>
+					</form>
 				</div>
 			
 			</div>
