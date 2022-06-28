@@ -15,26 +15,22 @@
 			<!-- SIGN UP -->
 			<div class="col align-items-center flex-col sign-up">
 				<div class="form-wrapper align-items-center">
-					<form action="/backend/loginsigup.php" class="form sign-up" method="post">
+					<form action="../../backend/loginsigup.php" class="form sign-up" method="post" enctype="multipart/form-data">
 						<div class="input-group">
-							<i class='bx bxs-user'></i>
 							<label for="name"></label>
-							<input id="name" type="text" placeholder="Username">
+							<input id="name" name="name" type="text" placeholder="Username">
 						</div>
 						<div class="input-group">
-							<i class='bx bx-mail-send'></i>
 							<label for="mail"></label>
-							<input id="mail" type="email" placeholder="Email">
+							<input id="mail" type="email" name="mail" placeholder="Email">
 						</div>
 						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
 							<label for="password"></label>
-							<input type="password" placeholder="Password">
+							<input type="password" name="password" placeholder="Password">
 						</div>
 						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
 							<label for="passconfirm"></label>
-							<input type="password" id="passconfirm" placeholder="Confirm password">
+							<input type="password" name="passconfirm" id="passconfirm" placeholder="Confirm password">
 						</div>
 						<button>
 							Sign up
@@ -61,25 +57,29 @@
 			<div class="col align-items-center flex-col sign-in">
 				<div class="form-wrapper align-items-center">
 					<div class="form sign-in">
-						<div class="input-group">
-							<i class='bx bxs-user'></i>
-							<input type="text" placeholder="Username">
-						</div>
-						<div class="input-group">
-							<i class='bx bxs-lock-alt'></i>
-							<input type="password" placeholder="Password">
-						</div>
-						<button>
-							Sign in
-						</button>
-						<p>
-							<span>
-								Don't have an account?
-							</span>
-							<b onclick="toggle()" class="pointer">
-								Sign up here
-							</b>
-						</p>
+						<form action="../../backend/signin.php" method="post">
+							<div class="input-group">
+								<i class='bx bxs-user'></i>
+								<label for="mail"></label>
+								<input type="text" name="mail" placeholder="Email">
+							</div>
+							<div class="input-group">
+								<i class='bx bxs-lock-alt'></i>
+								<label for="password"></label>
+								<input type="password" name="password" placeholder="Password">
+							</div>
+							<button>
+								Sign in
+							</button>
+							<p>
+								<span>
+									Don't have an account?
+								</span>
+								<b onclick="toggle()" class="pointer">
+									Sign up here
+								</b>
+							</p>
+						</form>
 					</div>
 				</div>
 				<div class="form-wrapper">
