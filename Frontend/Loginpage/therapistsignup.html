@@ -26,7 +26,7 @@
     </header>
     <main>
         <div class="form">
-            <form action="">
+            <form action="../../backend/therapistsignup.php" method="post" enctype="multipart/form-data">
                 <div class="input-group">
                     <label for="name"></label>
                     <input type="text" name="name" placeholder="Username">
@@ -49,17 +49,17 @@
                 </div>
                 <div class="input-group">
                     <label for="aboutself"></label>
-                    <textarea name="aboutyou" name="aboutself" id="" cols="50" rows="5">About yourself</textarea>
+                    <textarea  name="aboutself" id="" cols="50" rows="5" placeholder="About yourself"></textarea>
                 </div>
                 <div>
-                    <label for="profile" id="cpic">Car Picture</label>
+                    <label for="profile" id="cpic">Profile Picture</label>
                     <input type="file" required name="profile">
                 </div>
                 <div class="input-group password">
                     <label for="password"></label>
                     <input type="password" name="password" placeholder="Password">
-                    <label for="passcon"></label>
-                    <input type="password" name="passcon" placeholder="Confirm password">
+                    <label for="passconfirm"></label>
+                    <input type="password" name="passconfirm" placeholder="Confirm password">
                 </div>
                 <button>
                     Sign up

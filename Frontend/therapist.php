@@ -1,3 +1,7 @@
+<?php
+require '../backend/connection.php';
+$therapist = mysqli_query($connection, "SELECT * FROM therapists");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,35 @@
     <main>
         <div class="therapits">
             <div class="container">
+                <?php
+                    if(mysqli_num_rows($therapist) > 0){
+                        $i = 0;
+                        while($row = mysqli_fetch_assoc($therapist)){
+                ?>
                 <div class="card">
+                    <div class="intro">
+                        <?php echo "<img src='../Images/Therapists/".$row['profile']."'>"?>
+                        <h3> <?php echo $row['name'];?> </h3>
+                        <p> <?php echo $row['title'];?></p>
+                        <p> <?php echo $row['organization'];?></p>
+                    </div>
+                    <div class="details">
+                        <p> <?php echo $row['aboutself'];?></p>
+                    </div>
+                    <div class="contacts">
+                        <button><a href="mailto:"><?php echo $row['email'];?></a></button>
+                        <button><a href="tel:"><?php echo $row['phone_number'];?></a></button>  
+                    </div>
+                </div>
+                <?php
+                        $i++;
+                        }
+                    }
+                else{
+                    echo "No results found.".mysqli_error($connection);
+                }  
+                ?>
+                <!-- <div class="card">
                     <div class="intro">
                         <img src="../Images/kate.jpg" alt="">
                         <h3>Kate Busaka</h3>
@@ -41,8 +73,8 @@
                         <button><a href="tel:0700023232">Phone number.</a></button>
                         
                     </div>
-                </div>
-                <div class="card">
+                </div> -->
+                <!-- <div class="card">
                     <div class="intro">
                         <img src="../Images/ivy.jpg" alt="">
                         <h3>Ivy Murugi</h3>
@@ -169,7 +201,7 @@
                         <button><a href="tel:0700023232">Phone number.</a></button>
                         
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>
