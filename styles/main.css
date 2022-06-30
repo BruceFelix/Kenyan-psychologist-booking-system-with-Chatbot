@@ -53,6 +53,7 @@ li a{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2px;
 }
+
 .link{
     border: 1px solid white;
     padding: 1px 5px;
@@ -339,4 +340,10 @@ footer img{
     height: 20px;
     padding: 0;
     color: white;
+}
+#logout{
+    background-color: none;
+    outline: none;
+    border: none;
+    background: blue !important;
 }

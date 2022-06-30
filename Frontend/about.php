@@ -1,16 +1,20 @@
+<?php
+require '../backend/connection.php';
+$therapist = mysqli_query($connection, "SELECT * FROM therapists");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/Images/logooriginal.png">
-    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="shortcut icon" href="../Images/logooriginal.png">
+    <link rel="stylesheet" href="../styles/about.css">
     <title>About Us</title>
 </head>
 <body>
-    <img class="bg" src="/Images/blob2.svg" alt="">
-    <img class="bg" src="/Images/blob.svg" alt="">
+    <img class="bg" src="../Images/blob2.svg" alt="">
+    <img class="bg" src="../Images/blob.svg" alt="">
     <header>
         <nav>
             <div class="container">
@@ -19,11 +23,25 @@
                     <p> Therapy </br> Platform</p>
                 </div>
                 <ul>
-                    <li id="home"> <a href="../Frontend/landing.html">Home</a></li>
-                    <li><a href="../Frontend/help.html">We can help with...</a></li>
+                    <li id="home"> <a href="../Frontend/landing.php">Home</a></li>
+                    <li><a href="../Frontend/help.php">We can help with...</a></li>
                     <li><a href="../Frontend/therapist.php">Therapists</a></li>
-                    <li><a href="../Frontend/about.html">About</a></li>
-                    <li><a class="link"  href="../Frontend/Loginpage/index.html">Login</a></li>
+                    <!-- <li><a href="../Frontend/about.html">About</a></li> -->
+                    <?php
+                    if(!isset($_SESSION['username'])){
+                        header("location: ../Frontend/Loginpage/index.html");
+                    }
+                    else{
+                      echo $_SESSION['username'];
+                      echo "
+                      <li>
+                      <form action='../backend/destroy.php' method='post'>
+                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                      </form>
+                      </li>";
+                    }
+                     ?>
+                    <!-- <li><a class="link"  href="../Frontend/Loginpage/index.html">Login</a></li> -->
                 </ul>
             </div>
         </nav>
