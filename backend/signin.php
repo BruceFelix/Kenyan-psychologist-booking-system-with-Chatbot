@@ -26,7 +26,7 @@ if(isset($_POST['mail']) && isset($_POST['password'])){
             {   
                 $_SESSION['email'] = $received['mail'];
                 $_SESSION['username'] = $received['name'];
-                header("location: ../Frontend/therapist.html");
+                header("location: ../Frontend/landing.php");
     
             }
             else{

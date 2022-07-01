@@ -1,3 +1,6 @@
+<?php
+    require '../backend/connection.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +23,24 @@
                 </div>
                 <ul>
                     <li id="home">Home</li>
-                    <li><a href="../Frontend/help.html">We can help with...</a></li>
+                    <li><a href="../Frontend/help.php">We can help with...</a></li>
                     <li><a href="../Frontend/therapist.php">Therapists</a></li>
-                    <li><a href="../Frontend/about.html">About</a></li>
-                    <li><a class="link"  href="../Frontend/Login page/index.html">Login</a></li>
+                    <li><a href="../Frontend/about.php">About</a></li>
+                    <?php
+                    if(!isset($_SESSION['username'])){
+                        header("location: ../Frontend/Loginpage/index.html");
+                    }
+                    else{
+                      echo $_SESSION['username'];
+                      echo "
+                      <li>
+                      <form action='../backend/destroy.php' method='post'>
+                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                      </form>
+                      </li>";
+                    }
+                     ?>
+                    <!-- <li><a class="link"  href="../Frontend/Login page/index.html">Login</a></li> -->
                 </ul>
             </div>
             <div class="description">

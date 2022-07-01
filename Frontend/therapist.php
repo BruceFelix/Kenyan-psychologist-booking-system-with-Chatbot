@@ -20,9 +20,23 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             </div>
             <div class="links">
                 <ul>
-                    <li><a href="../Frontend/landing.html">Home</a></li>
-                    <li><a href="../Frontend/about.html">About</a></li>
-                    <li class="link"><a href="../Frontend/Login page/index.html">Login</a></li>
+                    <li><a href="../Frontend/landing.php">Home</a></li>
+                    <li><a href="../Frontend/about.php">About</a></li>
+                    <?php
+                    if(!isset($_SESSION['username'])){
+                        header("location: ../Frontend/Loginpage/index.html");
+                    }
+                    else{
+                      echo $_SESSION['username'];
+                      echo "
+                      <li>
+                      <form action='../backend/destroy.php' method='post'>
+                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                      </form>
+                      </li>";
+                    }
+                     ?>
+                    <!-- <li class="link"><a href="../Frontend/Login page/index.html">Login</a></li> -->
                 </ul>
             </div>
         </nav>
