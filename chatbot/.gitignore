@@ -1,0 +1,5 @@
+# My custom
+/data
+/log
+*.bat
+*.pyc
