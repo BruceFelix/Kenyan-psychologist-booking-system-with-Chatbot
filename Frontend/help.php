@@ -28,11 +28,12 @@
                         header("location: ../Frontend/Loginpage/index.html");
                     }
                     else{
-                      echo $_SESSION['username'];
+                        
+                      echo "<li class='username'>".$_SESSION['username']."</li>";
                       echo "
                       <li>
                       <form action='../backend/destroy.php' method='post'>
-                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                         <a > <input type='submit' class='link' value='Logout' id='logout'></a>
                       </form>
                       </li>";
                     }
@@ -88,12 +89,11 @@
         <button><span class="search"><img src="../Images/magnifying-glass-solid.svg" alt=""></span> Find a Therapist</button>
     </div>
     <footer>
-        <a href="">Book a Therapist</a>
+        <a href="../Frontend/therapist.php">Book a Therapist</a>
         <div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact us</a></li>
+                <li><a href="../Frontend/landing.php">Home</a></li>
+                <li><a href="../Frontend/about.php">About</a></li>
             </ul>
         </div>
         <p>Copyright &#169 Kenya Therapy Platform</p>

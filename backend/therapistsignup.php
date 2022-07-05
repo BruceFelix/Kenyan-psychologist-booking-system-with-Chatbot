@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     else{
                         if(mysqli_query($connection,$insert_details)){
                             // echo "<h3 style='color:green'>User added successfully</h3>";
-                            header("location: ../Frontend/Loginpage/index.html");
+                            header("location: ../../Frontend/Loginpage/index.html");
                         }
                         else{
                             echo "<h3 style='color:red'>User not added </h3>".mysqli_error($connection);

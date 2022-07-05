@@ -36,7 +36,7 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                       echo "
                       <li>
                       <form action='../backend/destroy.php' method='post'>
-                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                         <a > <input type='submit' class='link  ' value='Logout'></a>
                       </form>
                       </li>";
                     }

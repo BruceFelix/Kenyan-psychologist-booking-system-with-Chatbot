@@ -10,32 +10,43 @@ if(isset($_POST['mail']) && isset($_POST['password'])){
     
     //the username entered should match with the password
     $selectUser = "SELECT * FROM users WHERE email='$email'";
-    $received = mysqli_query($connection,$selectUser);
+    $selecttherapist = "SELECT * FROM therapists WHERE email='$email'";
+    $receiveduser = mysqli_query($connection,$selectUser);
+    $receivedtherapist= mysqli_query($connection,$selecttherapist);
     
     //checking number of rows received
-    if(!$received){
+    if(!$receiveduser || !$receivedtherapist){
         echo "mysqli_error".mysqli_error($connection);
     }
     else{
-        $row =mysqli_num_rows($received);
-        $received = mysqli_fetch_assoc($received);
-        if($row>0)
+        $rowuser =mysqli_num_rows($receiveduser);
+        $rowtherapist =mysqli_num_rows($receivedtherapist);
+        $receiveduser= mysqli_fetch_assoc($receiveduser);
+        $receivedtherapist= mysqli_fetch_assoc($receivedtherapist);
+        if($rowuser>0 || $rowtherapist)
         {
             
-            if(password_verify($password,$received['password']))
+            if(password_verify($password,$receiveduser['password']) || password_verify($password,$receivedtherapist['password']))
             {   
-                $_SESSION['email'] = $received['mail'];
-                $_SESSION['username'] = $received['name'];
-                header("location: ../Frontend/landing.php");
+                if($receiveduser){
+                    $_SESSION['email'] = $receiveduser['mail'];
+                    $_SESSION['username'] = $receiveduser['name'];
+                    header("location: ../Frontend/landing.php");
+                }
+                else{
+                    $_SESSION['email'] = $receivedtherapist['mail'];
+                    $_SESSION['username'] = $receivedtherapist  ['name'];
+                    header("location: ../Frontend/landing.php");
+                }
     
             }
             else{
-                header("location: ../Frontend/index.html");
+                header("location: ../Frontend/Loginpage/index.html");
             }
         }
         else
         {
-            header("location: ../Frontend/index.html");
+            header("location: ../Frontend/Loginpage/index.html");
         }
     }
     }
