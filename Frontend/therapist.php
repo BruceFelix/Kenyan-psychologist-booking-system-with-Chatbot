@@ -27,11 +27,11 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                         header("location: ../Frontend/Loginpage/index.html");
                     }
                     else{
-                      echo $_SESSION['username'];
+                      echo "<li class='uname'>".$_SESSION['username']."</li>";
                       echo "
                       <li>
                       <form action='../backend/destroy.php' method='post'>
-                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                         <a class='link' > <input type='submit'  id='logout'    value='Logout' ></a>
                       </form>
                       </li>";
                     }
@@ -72,150 +72,6 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                     echo "No results found.".mysqli_error($connection);
                 }  
                 ?>
-                <!-- <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div> -->
-                <!-- <div class="card">
-                    <div class="intro">
-                        <img src="../Images/ivy.jpg" alt="">
-                        <h3>Ivy Murugi</h3>
-                        <p>Psychologist</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="intro">
-                        <img src="../Images/kate.jpg" alt="">
-                        <h3>Kate Busaka</h3>
-                        <p>Registered Counsellor</p>
-                        <p>Kenya Psychologist association</p>
-                    </div>
-                    <div class="details">
-                        <p>"I work psychodynamically and take a person-centred approach to the process of therapy, working with each client as an individual. Counselling supports you to be the author of your own life story – giving you a safe space to be heard and the courage to live life on your"</p>
-                    </div>
-                    <div class="contacts">
-                        <button><a href="mailto:katebusaka@gmail.com">Email me</a></button>
-                        <button><a href="tel:0700023232">Phone number.</a></button>
-                        
-                    </div>
-                </div> -->
             </div>
         </div>
     </main>

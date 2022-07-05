@@ -35,7 +35,7 @@
                       echo "
                       <li>
                       <form action='../backend/destroy.php' method='post'>
-                         <a > <input type='submit' class='logout' value='Logout' id='logout'></a>
+                         <a > <input type='submit' class='link' value='Logout'></a>
                       </form>
                       </li>";
                     }
@@ -48,7 +48,7 @@
                 <p>Book counselling with a qualified therapist easily and quickly.</p>
                 <p>Talk online, in person or by phone.</p>
                 <p>Help us Match you with the right therapist</p>
-                <button><span class="search"><img src="../Images/magnifying-glass-solid.svg" alt=""></span> Find a Therapist</button>
+                <a href="../Frontend/therapist.php"><button><span class="search"><img src="../Images/magnifying-glass-solid.svg" alt=""></span> Find a Therapist</button></a
             </div>
         </nav>
     </header>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <p class="last"><a href="">Find a therapist <img src="/Images/chevron-right-solid.svg" alt=""></a></p>
+            <p class="last"><a href="../Frontend/therapist.php">Find a therapist <img src="/Images/chevron-right-solid.svg" alt=""></a></p>
         </section>
         <section class="testimonys">
             <h3>What our clients are saying...</h3>
@@ -177,12 +177,11 @@
             </a>
         </div>
         <footer>
-            <a href="">Book a Therapist</a>
+            <a href="../Frontend/therapist.php">Book a Therapist</a>
             <div>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="../Frontend/about.php">About</a></li>
                 </ul>
             </div>
             <p>Copyright &#169 Kenya Therapy Platform</p>

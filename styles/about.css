@@ -64,6 +64,7 @@ li a{
 .link{
     border: 1px solid white;
     padding: 1px 5px;
+    background-color: unset;
     border-radius: 5px;
 }
 .link:hover{
@@ -88,6 +89,9 @@ li a{
 .name p:nth-child(2){
     font-size: 12px;
     margin-top: 20px;
+}
+.logout{
+    background-color: none !important;
 }
 .about{
     color: rgba(255, 255, 255);

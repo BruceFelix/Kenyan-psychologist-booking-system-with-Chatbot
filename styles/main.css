@@ -341,9 +341,9 @@ footer img{
     padding: 0;
     color: white;
 }
-#logout{
-    background-color: none;
+.logout{
+    background: unset !important;
+    color: white;
     outline: none;
     border: none;
-    background: blue !important;
-}
+ }
