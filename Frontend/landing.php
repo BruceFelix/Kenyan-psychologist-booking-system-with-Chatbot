@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Images/logooriginal.png">
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/chat.css">
+    <link rel="stylesheet" href="../Frontend/interface/style.css">
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/typing.css">
     <title>Kenya Psychologist Booking System</title>
 </head>
 <body>
@@ -176,6 +179,52 @@
                 <img src="../Images/letsgo.png" alt="">
             </a>
         </div>
+        <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="../Frontend/interface/images/image.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div>
+                        <div class="messages__item messages__item--visitor">
+                            Can you let me talk to the support?
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Sure!
+                        </div>
+                        <div class="messages__item messages__item--visitor">
+                            Need your help, I need a developer in my site.
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Hi... What is it? I'm a front-end developer, yay!
+                        </div>
+                        <div class="messages__item messages__item--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
+                    <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
+                    <input type="text" placeholder="Write a message...">
+                    <p class="chatbox__send--footer">Send</p>
+                    <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button class="theactivationbutton" ><img src="../Frontend/Images/messaging.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
         <footer>
             <a href="../Frontend/therapist.php">Book a Therapist</a>
             <div>
@@ -195,5 +244,7 @@
         </footer>
     </main>
     <script src="slider.js"></script>
+    <script src="../Frontend/interface/assets/js/Chat.js"></script>
+    <script src="../Frontend/interface/app.js"></script>
 </body>
 </html>

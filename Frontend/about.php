@@ -114,7 +114,7 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             <img src="/Images/letsgo.png" alt="">
         </a>
     </div>
-    <div class="container-chatbot">
+    <div class="container">
         <div class="chatbox">
             <div class="chatbox__support">
                 <div class="chatbox__header">
