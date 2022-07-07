@@ -5,6 +5,7 @@
 }
 body{
     background-color: #f5f6fa;
+    height: max-content;
 }
 .bg{
     z-index: -1000;
@@ -61,11 +62,11 @@ li a{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2px;
 }
-.link{
-    border: 1px solid white;
+input[type=submit].link{
     padding: 1px 5px;
     background-color: unset;
     border-radius: 5px;
+    color: white;
 }
 .link:hover{
     background-color: rgba(194, 89, 255, 0.9);
@@ -264,4 +265,13 @@ footer img{
     height: 20px;
     padding: 0;
     color: white;
+}
+.chatbot{
+    position: relative;
+}
+.chatbox__button{
+    text-align: right;
+    position: fixed;
+    right: 4px;
+    bottom: 4px;
 }
