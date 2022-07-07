@@ -9,6 +9,10 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Images/logooriginal.png">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/chat.css">
+    <link rel="stylesheet" href="../Frontend/interface/style.css">
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/typing.css">
     <link rel="stylesheet" href="../styles/about.css">
     <title>About Us</title>
 </head>
@@ -36,7 +40,7 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                       echo "
                       <li>
                       <form action='../backend/destroy.php' method='post'>
-                         <a > <input type='submit' class='link  ' value='Logout'></a>
+                         <a  > <input type='submit' class='link  ' value='Logout'></a>
                       </form>
                       </li>";
                     }
@@ -76,7 +80,7 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                 </div>
             </div>
             <div class="safespace goals-values">
-                <img src="/Images/safespace.svg" alt="">
+                <img src="../Images/safespace.svg" alt="">
                 <div class="gcontent">
                     <p>We are on a mission to eliminate prolonged emotional suffering worldwide. We want to make it as common and important to seek treatment for our mental health as it is for physical difficulties.</p>
                     <p>We are committed to maintaining the highest quality standards across all of the therapists listed on the platform and regularly review client feedback.</p>
@@ -110,24 +114,71 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             <img src="/Images/letsgo.png" alt="">
         </a>
     </div>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="../Frontend/interface/images/image.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div>
+                        <div class="messages__item messages__item--visitor">
+                            Can you let me talk to the support?
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Sure!
+                        </div>
+                        <div class="messages__item messages__item--visitor">
+                            Need your help, I need a developer in my site.
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Hi... What is it? I'm a front-end developer, yay!
+                        </div>
+                        <div class="messages__item messages__item--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
+                    <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
+                    <input type="text" placeholder="Write a message...">
+                    <p class="chatbox__send--footer">Send</p>
+                    <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button class="theactivationbutton" ><img src="../Frontend/Images/messaging.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
     <footer>
         <a href="">Book a Therapist</a>
         <div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="../about.php">About</a></li>
             </ul>
         </div>
         <p>Copyright &#169 Kenya Therapy Platform</p>
         <ul>
-            <li><a href=""><img src="/Images/facebook.svg" alt=""></a></li>
-            <li><a href=""><img src="/Images/instagram.svg" alt=""></a></li>
-            <li><a href=""><img src="/Images/twitter.svg" alt=""></a></li>
+            <li><a href=""><img src="../Images/facebook.svg" alt=""></a></li>
+            <li><a href=""><img src="../Images/instagram.svg" alt=""></a></li>
+            <li><a href=""><img src="../Images/twitter.svg" alt=""></a></li>
             <li><a href="mailto:info@kenyatherapy.com">info@kenyatherapy.com</a></li>
             <li><a href=""></a>0700000000</li>
         </ul>
     </footer>
+    <script src="../Frontend/interface/assets/js/Chat.js"></script>
+    <script src="../Frontend/interface/app.js"></script>
 </main>
 </body>
 </html>

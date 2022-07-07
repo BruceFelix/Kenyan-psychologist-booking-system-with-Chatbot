@@ -9,6 +9,9 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/therapist.css">
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/chat.css">
+    <link rel="stylesheet" href="../Frontend/interface/style.css">
+    <link rel="stylesheet" href="../Frontend/interface/assets/css/typing.css">
     <title>Therapists</title>
 </head>
 <body>
@@ -80,6 +83,52 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             <img src="../Images/letsgo.png" alt="">
         </a>
     </div>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="../Frontend/interface/images/image.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div>
+                        <div class="messages__item messages__item--visitor">
+                            Can you let me talk to the support?
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Sure!
+                        </div>
+                        <div class="messages__item messages__item--visitor">
+                            Need your help, I need a developer in my site.
+                        </div>
+                        <div class="messages__item messages__item--operator">
+                            Hi... What is it? I'm a front-end developer, yay!
+                        </div>
+                        <div class="messages__item messages__item--typing">
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                            <span class="messages__dot"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__footer">
+                    <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
+                    <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
+                    <input type="text" placeholder="Write a message...">
+                    <p class="chatbox__send--footer">Send</p>
+                    <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button class="theactivationbutton" ><img src="../Frontend/Images/messaging.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
     <footer>
         <div>
             <ul>
@@ -97,5 +146,7 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             <li><a href="tel:0700000000">Call us.</a></li>
         </ul>
     </footer>
+    <script src="../Frontend/interface/assets/js/Chat.js"></script>
+    <script src="../Frontend/interface/app.js"></script>
 </body>
 </html>
