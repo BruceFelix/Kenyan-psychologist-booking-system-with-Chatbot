@@ -92,22 +92,22 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
                     </div>
                     <div class="chatbox__content--header">
                         <h4 class="chatbox__heading--header">Chat support</h4>
-                        <p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum available</p>
+                        <p class="chatbox__description--header">Your personal psychologist available 24/7. Just for fun.</p>
                     </div>
                 </div>
                 <div class="chatbox__messages">
                     <div>
                         <div class="messages__item messages__item--visitor">
-                            Can you let me talk to the support?
+                            Hi Bruce.How are you feeling today? Please answer me in English
                         </div>
                         <div class="messages__item messages__item--operator">
-                            Sure!
+                            I feel bored
                         </div>
                         <div class="messages__item messages__item--visitor">
-                            Need your help, I need a developer in my site.
+                            Please tell me more.
                         </div>
                         <div class="messages__item messages__item--operator">
-                            Hi... What is it? I'm a front-end developer, yay!
+                            I don't feel anything
                         </div>
                         <div class="messages__item messages__item--typing">
                             <span class="messages__dot"></span>
