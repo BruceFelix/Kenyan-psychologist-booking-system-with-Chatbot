@@ -35,7 +35,10 @@
     right: 4px;
     bottom: 4px;
 }
-
+.chatbox__button img{
+    width: 30px;
+    height: 30px;
+}
 
 /* HEADER */
 .chatbox__header {

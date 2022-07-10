@@ -114,9 +114,9 @@ body {
     color: white;
 }
 
-.chatbox__button button,
-.chatbox__button button:focus,
-.chatbox__button button:visited {
+.chatbox__button,
+.chatbox__button:focus,
+.chatbox__button:visited {
     padding: 10px;
     background: white;
     border: none;

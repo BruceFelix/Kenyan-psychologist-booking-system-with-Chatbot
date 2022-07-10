@@ -129,7 +129,7 @@ button span{
     height: 600px;
     display: flex;
     flex-direction: column;
-    background: url("/Images/blob.svg") no-repeat right;
+    background: url("../Images/blob.svg") no-repeat right;
     background-size: contain;
 }
 .working h2{
