@@ -33,7 +33,7 @@ header("Access-Control-Allow-Origin: *");
                     <li><a href="../Frontend/about.php">About</a></li>
                     <?php
                     if(!isset($_SESSION['username'])){
-                        header("location: ../Frontend/Loginpage/index.html");
+                        // header("location: ../Frontend/landing.php");
                     }
                     else{
                       echo $_SESSION['username'];
@@ -45,7 +45,7 @@ header("Access-Control-Allow-Origin: *");
                       </li>";
                     }
                      ?>
-                    <!-- <li><a class="link"  href="../Frontend/Login page/index.html">Login</a></li> -->
+                    <li><a class="link"  href="../Frontend/Loginpage/index.html">Login</a></li>
                 </ul>
             </div>
             <div class="description">
