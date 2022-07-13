@@ -111,9 +111,12 @@ body {
 }
 
 .chatbox__send--footer {
+    border: 1px solid peachpuff;
+    padding: 5px;
     color: white;
+    background: unset;
+    border-radius: 10px;
 }
-
 .chatbox__button,
 .chatbox__button:focus,
 .chatbox__button:visited {
