@@ -1,6 +1,7 @@
 <?php
-require '../backend/connection.php';
-$therapist = mysqli_query($connection, "SELECT * FROM therapists");
+    header("Access-Control-Allow-Origin: *");
+    require '../backend/connection.php';
+    $therapist = mysqli_query($connection, "SELECT * FROM therapists");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,51 +85,86 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
         </a>
     </div>
     <div class="container">
-        <div class="chatbox">
-            <div class="chatbox__support">
-                <div class="chatbox__header">
-                    <div class="chatbox__image--header">
-                        <img src="../Frontend/interface/images/image.png" alt="image">
-                    </div>
-                    <div class="chatbox__content--header">
-                        <h4 class="chatbox__heading--header">Chat support</h4>
-                        <p class="chatbox__description--header">Your personal psychologist available 24/7. Just for fun.</p>
-                    </div>
-                </div>
-                <div class="chatbox__messages">
-                    <div>
-                        <div class="messages__item messages__item--visitor">
-                            Hi Bruce.How are you feeling today? Please answer me in English
+            <div class="chatbox">
+                <div class="chatbox__support">
+                    <div class="chatbox__header">
+                        <div class="chatbox__image--header">
+                            <img src="../Frontend/interface/images/image.png" alt="image">
                         </div>
-                        <div class="messages__item messages__item--operator">
-                            I feel bored
-                        </div>
-                        <div class="messages__item messages__item--visitor">
-                            Please tell me more.
-                        </div>
-                        <div class="messages__item messages__item--operator">
-                            I don't feel anything
-                        </div>
-                        <div class="messages__item messages__item--typing">
-                            <span class="messages__dot"></span>
-                            <span class="messages__dot"></span>
-                            <span class="messages__dot"></span>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">Chat support</h4>
+                            <p class="chatbox__description--header">Your personal psychologist available 24/7. Just for fun.</p>
                         </div>
                     </div>
+                    <div class="chatbox__messages">
+                        <div id='mainText'>
+                            <!-- <div class="messages__item messages__item--visitor">
+                                Hi Bruce.How are you feeling today? Please answer me in English
+                            </div>
+                            <div class="messages__item messages__item--operator">
+                                I feel bored
+                            </div>
+                            <div class="messages__item messages__item--visitor">
+                                Please tell me more.
+                            </div>
+                            <div class="messages__item messages__item--operator">
+                                I don't feel anything
+                            </div>
+
+                            <div class="messages__item messages__item--visitor">
+                                You don't feel anything?
+                            </div>
+
+                            <div class="messages__item messages__item--typing">
+                                <span class="messages__dot"></span>
+                                <span class="messages__dot"></span>
+                                <span class="messages__dot"></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="chatbox__footer">
+                        <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
+                        <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
+                        <input type="text" placeholder="Write a message..." id="inputMsg">
+                        <button class="chatbox__send--footer" id="send-btn">Send</button>
+                        <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
+                    </div>
+
+                    <script>
+                        let sendBtn = document.getElementById("send-btn");
+                        let sender_msg =document.getElementById("inputMsg").value
+                        sendBtn.addEventListener("click", ()=>{
+                            if(document.getElementById("inputMsg").value!=""){
+                                putText(document.getElementById("inputMsg").value, 1)
+                            $.ajax({
+                                type: "POST",
+                                url: "http://127.0.0.1:5000",
+                                data: JSON.stringify({"sender":document.getElementById("inputMsg").value}),
+                                contentType:"application/json",
+                                success:(data)=> {
+                                    console.log(data)
+                                    putText(data['msg'], 4)
+                                    console.log("yes")
+                                } 
+                                })
+                                document.getElementById("inputMsg").value =""
+                                // .done(function( data ) {
+                                //     alert( "Data Loaded: " + data );
+                                // });
+                                ;
+                            console.log("send")
+                        
+                            console.log("Received")
+                            }
+                        })
+                    </script>
+
                 </div>
-                <div class="chatbox__footer">
-                    <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
-                    <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
-                    <input type="text" placeholder="Write a message...">
-                    <p class="chatbox__send--footer">Send</p>
-                    <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
+                <div class="chatbox__button">
+                    <img src="../Images/messaging.svg" alt="">
                 </div>
-            </div>
-            <div class="chatbox__button">
-                <button class="theactivationbutton" ><img src="../Frontend/Images/messaging.svg" alt=""></button>
             </div>
         </div>
-    </div>
     <footer>
         <div>
             <ul>
@@ -146,7 +182,10 @@ $therapist = mysqli_query($connection, "SELECT * FROM therapists");
             <li><a href="tel:0700000000">Call us.</a></li>
         </ul>
     </footer>
+    <script src="./test.js"></script>
+    <!-- <script src="slider.js"></script> -->
     <script src="../Frontend/interface/assets/js/Chat.js"></script>
     <script src="../Frontend/interface/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>

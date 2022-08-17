@@ -97,11 +97,11 @@ header("Access-Control-Allow-Origin: *");
                 <img src="../Images/star-solid 1.svg" alt="">
                 <img src="../Images/star-solid 1.svg" alt="">
             </div>
-            <div class="slider">
-                <div class="sliderone">
-                    <div class="left">
+            <div class="swiper">
+                <div class=" swiper-slide sliderone">
+                    <!-- <div class="left">
                         <img src="../Images/less-than-solid.svg" alt="">
-                    </div>
+                    </div> -->
                     <div class="testimony one">
                         <blockquote>"An understanding therapist. I'm glad to have found someone to discuss my concerns about the past and how to move on."</blockquote>
                         <div class="details">
@@ -113,14 +113,14 @@ header("Access-Control-Allow-Origin: *");
                         <img src="../Images/chevron-right-solid.svg" alt="">
                     </div>
                 </div>
-                <div class="testimony two">
+                <div class=" swiper-slide testimony two">
                     <blockquote>"Only had one session with Lee and can't fault him anywhere. Seemed very patient, understanding and perceptive. Asked questions that seemed to broaden my perspective. Happily registered for a follow up."</blockquote>
                     <div class="details">
                         <p>Therapist: <a href="">Peter Mwangi</a></p>
                     </div>
                     <p>Septemer 8th 2021</p>
                 </div>
-                <div class="testimony three">
+                <div class="swiper-slide testimony three">
                     <blockquote>"Joe was kind, empathetic, non-judgemental and very understanding. I felt like I made clear, genuine progress through our sessions together. I found that the exercises and little assignments he made me do 
                         applied positively to my life and I believe I've made a meaningful change in our sessions together. There was never an instance where I felt uncomfortable talking to him regarding the issues and concerns 
                         I had going on with my life. I could not recommend him more!"</blockquote>
@@ -129,7 +129,7 @@ header("Access-Control-Allow-Origin: *");
                     </div>
                     <p>March 17th 2022</p>
                 </div>
-                <div class="testimony four">
+                <div class="swiper-slide testimony four">
                     <blockquote>“Ali was great. A kind and empathetic listener who was able to hold space for me to speak about my issues and helped me clarify and reframe them in a way that better enabled me to move forward. Would highly recommend her.”</blockquote>
                     <div class="details">
                         <p>Therapist: <a href="">Joyce Njeri</a></p>
@@ -182,86 +182,86 @@ header("Access-Control-Allow-Origin: *");
             </a>
         </div>
         <div class="container">
-        <div class="chatbox">
-            <div class="chatbox__support">
-                <div class="chatbox__header">
-                    <div class="chatbox__image--header">
-                        <img src="../Frontend/interface/images/image.png" alt="image">
+            <div class="chatbox">
+                <div class="chatbox__support">
+                    <div class="chatbox__header">
+                        <div class="chatbox__image--header">
+                            <img src="../Frontend/interface/images/image.png" alt="image">
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">Chat support</h4>
+                            <p class="chatbox__description--header">Your personal psychologist available 24/7. Just for fun.</p>
+                        </div>
                     </div>
-                    <div class="chatbox__content--header">
-                        <h4 class="chatbox__heading--header">Chat support</h4>
-                        <p class="chatbox__description--header">Your personal psychologist available 24/7. Just for fun.</p>
+                    <div class="chatbox__messages">
+                        <div id='mainText'>
+                            <!-- <div class="messages__item messages__item--visitor">
+                                Hi Bruce.How are you feeling today? Please answer me in English
+                            </div>
+                            <div class="messages__item messages__item--operator">
+                                I feel bored
+                            </div>
+                            <div class="messages__item messages__item--visitor">
+                                Please tell me more.
+                            </div>
+                            <div class="messages__item messages__item--operator">
+                                I don't feel anything
+                            </div>
+
+                            <div class="messages__item messages__item--visitor">
+                                You don't feel anything?
+                            </div>
+
+                            <div class="messages__item messages__item--typing">
+                                <span class="messages__dot"></span>
+                                <span class="messages__dot"></span>
+                                <span class="messages__dot"></span>
+                            </div> -->
+                        </div>
                     </div>
-                </div>
-                <div class="chatbox__messages">
-                    <div id='mainText'>
-                        <!-- <div class="messages__item messages__item--visitor">
-                            Hi Bruce.How are you feeling today? Please answer me in English
-                        </div>
-                        <div class="messages__item messages__item--operator">
-                            I feel bored
-                        </div>
-                        <div class="messages__item messages__item--visitor">
-                            Please tell me more.
-                        </div>
-                        <div class="messages__item messages__item--operator">
-                            I don't feel anything
-                        </div>
-
-                        <div class="messages__item messages__item--visitor">
-                            You don't feel anything?
-                        </div>
-
-                        <div class="messages__item messages__item--typing">
-                            <span class="messages__dot"></span>
-                            <span class="messages__dot"></span>
-                            <span class="messages__dot"></span>
-                        </div> -->
+                    <div class="chatbox__footer">
+                        <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
+                        <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
+                        <input type="text" placeholder="Write a message..." id="inputMsg">
+                        <button class="chatbox__send--footer" id="send-btn">Send</button>
+                        <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
                     </div>
-                </div>
-                <div class="chatbox__footer">
-                    <img src="../Frontend/interface/images/icons/emojis.svg" alt="">
-                    <img src="../Frontend/interface/images/icons/microphone.svg" alt="">
-                    <input type="text" placeholder="Write a message..." id="inputMsg">
-                    <button class="chatbox__send--footer" id="send-btn">Send</button>
-                    <img src="../Frontend/interface/images/icons/attachment.svg" alt="">
-                </div>
 
-                <script>
-                    let sendBtn = document.getElementById("send-btn");
-                    let sender_msg =document.getElementById("inputMsg").value
-                    sendBtn.addEventListener("click", ()=>{
-                        if(document.getElementById("inputMsg").value!=""){
-                            putText(document.getElementById("inputMsg").value, 1)
-                        $.ajax({
-                            type: "POST",
-                            url: "http://127.0.0.1:5000",
-                            data: JSON.stringify({"sender":document.getElementById("inputMsg").value}),
-                            contentType:"application/json",
-                            success:(data)=> {
-                                console.log(data)
-                                putText(data['msg'], 4)
-                                console.log("yes")
-                            } 
-                            })
-                            document.getElementById("inputMsg").value =""
-                            // .done(function( data ) {
-                            //     alert( "Data Loaded: " + data );
-                            // });
-                            ;
-                        console.log("send")
-                    
-                        console.log("Received")
-                        }
-                    })
-                </script>
+                    <script>
+                        let sendBtn = document.getElementById("send-btn");
+                        let sender_msg =document.getElementById("inputMsg").value
+                        sendBtn.addEventListener("click", ()=>{
+                            if(document.getElementById("inputMsg").value!=""){
+                                putText(document.getElementById("inputMsg").value, 1)
+                            $.ajax({
+                                type: "POST",
+                                url: "http://127.0.0.1:5000",
+                                data: JSON.stringify({"sender":document.getElementById("inputMsg").value}),
+                                contentType:"application/json",
+                                success:(data)=> {
+                                    console.log(data)
+                                    putText(data['msg'], 4)
+                                    console.log("yes")
+                                } 
+                                })
+                                document.getElementById("inputMsg").value =""
+                                // .done(function( data ) {
+                                //     alert( "Data Loaded: " + data );
+                                // });
+                                ;
+                            console.log("send")
+                        
+                            console.log("Received")
+                            }
+                        })
+                    </script>
 
-            </div>
-            <div class="chatbox__button">
-                <img src="../Images/messaging.svg" alt="">
+                </div>
+                <div class="chatbox__button">
+                    <img src="../Images/messaging.svg" alt="">
+                </div>
             </div>
         </div>
-    </div>
         <footer>
             <a href="../Frontend/therapist.php">Book a Therapist</a>
             <div>
